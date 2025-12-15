@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
@@ -9,8 +8,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+    <header className="fixed w-full z-50 bg-black/80 backdrop-blur-md opacity-80 shadow-md">
+      <nav className="px-4 mx-auto flex max-w-7xl items-center justify-between py-4">
         {/* Logo */}
         <Link href="/">
           <img src={logo.src} alt="Logo" className="h-12 w-auto" />
@@ -31,6 +30,11 @@ export default function Navbar() {
           <li>
             <Link href="#services" className="hover:text-blue-600">
               Services
+            </Link>
+          </li>
+          <li>
+            <Link href="#services" className="hover:text-blue-600">
+              Own Your Mic
             </Link>
           </li>
           <li>
@@ -67,6 +71,11 @@ export default function Navbar() {
             <li>
               <Link href="#services" onClick={() => setOpen(false)} className="hover:text-blue-600">
                 Services
+              </Link>
+            </li>
+            <li>
+              <Link href="#services" onClick={() => setOpen(false)} className="hover:text-blue-600">
+                Own Your Mic
               </Link>
             </li>
             <li>
