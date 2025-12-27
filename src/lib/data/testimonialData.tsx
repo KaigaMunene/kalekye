@@ -1,12 +1,12 @@
-import Mutheu from '../images/Mutheu-Mbathi.jpg';
-import Xile from '../images/Xile-Gabantu.jpg';
-import Mao from '../images/Mao.jpg';
-import Juliana from '../images/Juliana.webp';
-import Hildah from '../images/Hildah.jpg';
-import Shyro from '../images/Shyro.webp';
-import Sandra from '../images/Sandra.webp';
-import Hope from '../images/hope.webp';
-import Ann from '../images/ann.webp';
+import Mutheu from '@/assets/images/Mutheu-Mbathi.jpg';
+import Xile from '@/assets/images/Xile-Gabantu.jpg';
+import Mao from '@/assets/images/Mao.jpg';
+import Juliana from '@/assets/images/Juliana.webp';
+import Hildah from '@/assets/images/Hildah.jpg';
+import Shyro from '@/assets/images/Shyro.webp';
+import Sandra from '@/assets/images/Sandra.webp';
+import Hope from '@/assets/images/hope.webp';
+import Ann from '@/assets/images/ann.webp';
 
 export const testimonials = [
   {
