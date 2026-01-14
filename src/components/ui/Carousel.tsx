@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import type { CarouselImage } from '@/types/carousel';
 
@@ -11,26 +11,46 @@ interface CarouselProps {
 
 export default function Carousel({ images, autoSlideInterval = 5000 }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Ensure index is always within bounds
   const safeIndex = images && images.length > 0 ? Math.min(currentIndex, images.length - 1) : 0;
 
   const handleNext = useCallback(() => {
-    if (!images || images.length === 0) return;
+    if (!images || images.length === 0 || !isMounted) return;
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  }, [images]);
+  }, [images, isMounted]);
 
   const handlePrev = useCallback(() => {
-    if (!images || images.length === 0) return;
+    if (!images || images.length === 0 || !isMounted) return;
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  }, [images]);
+  }, [images, isMounted]);
 
-  // Auto slide
+  // Set mounted flag on client side only
   useEffect(() => {
-    if (!images || images.length === 0) return;
-    const interval = setInterval(handleNext, autoSlideInterval);
-    return () => clearInterval(interval);
-  }, [handleNext, autoSlideInterval, images]);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsMounted(true);
+  }, []);
+
+  // Auto slide - only start after component is mounted
+  useEffect(() => {
+    if (!isMounted || !images || images.length === 0) return;
+
+    // Clear any existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    intervalRef.current = setInterval(handleNext, autoSlideInterval);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [handleNext, autoSlideInterval, images, isMounted]);
 
   // Guard against empty images
   if (!images || images.length === 0) return null;
@@ -83,7 +103,11 @@ export default function Carousel({ images, autoSlideInterval = 5000 }: CarouselP
           <button
             key={index}
             aria-label={`Go to slide ${index + 1}`}
-            onClick={() => setCurrentIndex(index)}
+            onClick={() => {
+              if (isMounted) {
+                setCurrentIndex(index);
+              }
+            }}
             className={`h-3 w-3 rounded-full transition-colors ${
               safeIndex === index ? 'bg-white' : 'bg-white/50 hover:bg-white'
             }`}
