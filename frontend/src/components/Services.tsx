@@ -109,6 +109,8 @@ const Services = () => {
               src={bookConsultation.src}
               alt="book a consultation details"
               className="rounded-md mb-4 w-full h-96 max-w-sm object-contain"
+              width={400}
+              height={400}
             />
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2 text-center">
               Book a Consultation
@@ -135,6 +137,8 @@ const Services = () => {
               src={subscribePodcast.src}
               alt="Lets have a conversation with Kalekye"
               className="rounded-md mb-4 w-full max-w-sm object-contain"
+              width={400}
+              height={400}
             />
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2 text-center">
               Subscribe to the Podcast
@@ -155,7 +159,7 @@ const Services = () => {
 
         {/* Social Media Section */}
         <motion.div
-          className="mt-16 rounded-2xl bg-gradient-to-br from-brand-gold/10 via-white to-brand-gold/5 p-8 sm:p-12 lg:p-16 shadow-lg"
+          className="mt-16 rounded-2xl bg-linear-to-br from-brand-gold/10 via-white to-brand-gold/5 p-8 sm:p-12 lg:p-16 shadow-lg"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
