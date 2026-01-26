@@ -51,6 +51,7 @@ export default [
         ecmaFeatures: {
           jsx: true,
         },
+        project: './tsconfig.json',
       },
       globals: {
         React: 'readonly',
@@ -63,7 +64,9 @@ export default [
       },
     },
     rules: {
-      // React rules
+      // React rules - disable react-in-jsx-scope for React 17+
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
       ...reactPlugin.configs.recommended.rules,
       ...reactHooksPlugin.configs.recommended.rules,
       // Next.js rules
