@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, type Variants } from 'framer-motion';
+import Image from 'next/image';
 import hostProgram from '../assets/images/host-program.jpeg';
 import publicSpeaking from '../assets/images/public-speaking.jpeg';
 import voiceOver from '../assets/images/voiceover.jpeg';
@@ -74,10 +75,12 @@ const OwnYourMicPrograms = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               whileTap={{ scale: 0.98 }}
             >
-              <img
-                src={hostProgram.src}
+              <Image
+                src={hostProgram}
                 alt="Host Program - Own Your Mic"
                 className="rounded-md mb-4 w-full max-w-sm object-contain"
+                width={400}
+                height={300}
               />
               <h3 className="text-xl font-bold text-dark mb-4">The Host Program</h3>
               <p className="text-gray-600">
@@ -92,10 +95,12 @@ const OwnYourMicPrograms = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               whileTap={{ scale: 0.98 }}
             >
-              <img
-                src={publicSpeaking.src}
+              <Image
+                src={publicSpeaking}
                 alt="Public Speaking Program - Own Your Mic"
                 className="rounded-md mb-4 w-full max-w-sm object-contain"
+                width={400}
+                height={300}
               />
               <h3 className="text-xl font-bold text-dark mb-4">The Public Speaking Program</h3>
               <p className="text-gray-600">
@@ -110,10 +115,12 @@ const OwnYourMicPrograms = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               whileTap={{ scale: 0.98 }}
             >
-              <img
-                src={voiceOver.src}
+              <Image
+                src={voiceOver}
                 alt="Voiceover Program - Own Your Mic"
                 className="rounded-md mb-4 w-full max-w-sm object-contain"
+                width={400}
+                height={300}
               />
               <h3 className="text-xl font-bold text-dark mb-4">The Voiceover Program</h3>
               <p className="text-gray-600">

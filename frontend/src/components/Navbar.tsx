@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.png';
 
@@ -12,7 +13,7 @@ export default function Navbar() {
       <nav className="px-4 mx-auto flex max-w-7xl items-center justify-between py-4">
         {/* Logo */}
         <Link href="/">
-          <img src={logo.src} alt="Logo" className="h-12 w-auto" />
+          <Image src={logo} alt="Logo" className="h-12 w-auto" width={48} height={48} priority />
         </Link>
 
         {/* Desktop Links */}
