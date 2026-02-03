@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import logo from '../assets/images/icon_white.png';
 import { IoLogoInstagram } from 'react-icons/io';
 import { FaLinkedin } from 'react-icons/fa';
@@ -114,7 +115,13 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
           {/* Logo */}
-          <img src={logo.src} alt="Kalekye Mumo logo" className="w-14 h-14 object-contain" />
+          <Image
+            src={logo}
+            alt="Kalekye Mumo logo"
+            className="w-14 h-14 object-contain"
+            width={56}
+            height={56}
+          />
 
           {/* Copyright */}
           <p className="text-sm text-gray-300">

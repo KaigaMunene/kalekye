@@ -82,6 +82,8 @@ const Services = () => {
               src={ownYourMic}
               alt="Own your mic advert"
               className="rounded-md mb-4 w-full max-w-sm object-contain"
+              width={400}
+              height={300}
             />
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2 text-center">
               Join the Own Your Mic Program
