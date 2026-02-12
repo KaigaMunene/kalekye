@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { FaYoutube, FaSpotify } from 'react-icons/fa';
 import { IoLogoInstagram } from 'react-icons/io';
 import { fadeUp, scaleIn, staggerContainer } from '@/components/utils/animation';
+import { useContactModal } from '../contexts/ContactModalContext';
 import ownYourMic from '../assets/images/own-your-mic.jpeg';
 import subscribePodcast from '../assets/images/podcast-1.jpeg';
 import bookConsultation from '../assets/images/book-a-consultation.png';
@@ -26,6 +27,7 @@ const cardVariants: Variants = {
 };
 
 const Services = () => {
+  const { openModal } = useContactModal();
   const socialLinks = [
     {
       name: 'Instagram',
@@ -120,13 +122,13 @@ const Services = () => {
             <p className="text-sm md:text-base text-gray-600 mb-4 text-center">
               Let&apos;s discuss your goals and how we can work together to achieve them.
             </p>
-            <Link
-              href="#contact"
+            <button
+              onClick={openModal}
               className="mt-auto px-6 py-3 bg-brand-gold text-white font-medium rounded-lg hover:bg-brand-secondary transition duration-300"
               aria-label="Book a Consultation"
             >
               Get Started
-            </Link>
+            </button>
           </motion.div>
 
           {/* Option 3: Subscribe to the Podcast */}

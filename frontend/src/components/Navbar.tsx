@@ -4,9 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.png';
+import { useContactModal } from '../contexts/ContactModalContext';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { openModal } = useContactModal();
 
   return (
     <header className="fixed w-full z-50 bg-black/80 backdrop-blur-md opacity-80 shadow-md">
@@ -39,9 +41,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#contact" className="hover:text-blue-600">
+            <button onClick={openModal} className="hover:text-blue-600 cursor-pointer">
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
 
@@ -80,9 +82,15 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="#contact" onClick={() => setOpen(false)} className="hover:text-blue-600">
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  openModal();
+                }}
+                className="hover:text-blue-600 cursor-pointer text-left w-full"
+              >
                 Contact
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
