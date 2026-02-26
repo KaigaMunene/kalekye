@@ -82,11 +82,6 @@ const OwnYourMicPrograms = () => {
                 width={400}
                 height={300}
               />
-              <h3 className="text-xl font-bold text-dark mb-4">The Host Program</h3>
-              <p className="text-gray-600">
-                Learn to command the stage as a professional host or moderator. Ideal for
-                podcast/show hosts and panel moderators.
-              </p>
             </motion.div>
 
             {/* Public Speaking Program */}
