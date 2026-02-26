@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { StaticImageData } from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 
 export interface Testimonial {
   name: string;
@@ -24,9 +24,11 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         transition={{ duration: 0.2 }}
       >
         <h1 className="text-lg font-semibold mb-4 text-gold">{testimonial.program}</h1>
-        <img
-          src={testimonial.image.src}
+        <Image
+          src={testimonial.image}
           alt={testimonial.name}
+          width={400}
+          height={192}
           className="w-full h-48 object-contain mb-4"
         />
         <p className="text-base italic text-gray-700 flex-1">{`"${testimonial.description}"`}</p>

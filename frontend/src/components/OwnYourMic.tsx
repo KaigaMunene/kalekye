@@ -37,11 +37,11 @@ const cardVariants: Variants = {
 
 const OwnYourMicPrograms = () => {
   return (
-    <div className="font-forum py-12">
+    <div className="font-forum py-12 bg-white">
       {/* Hero Section */}
       <motion.section
         id="own-your-mic"
-        className="text-dark text-center px-6"
+        className="text-dark text-center px-6 bg-white"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
@@ -78,15 +78,10 @@ const OwnYourMicPrograms = () => {
               <Image
                 src={hostProgram}
                 alt="Host Program - Own Your Mic"
-                className="rounded-md mb-4 w-full max-w-sm object-contain"
+                className="rounded-md mb-4 w-full max-w-sm object-contain bg-red-500"
                 width={400}
                 height={300}
               />
-              <h3 className="text-xl font-bold text-dark mb-4">The Host Program</h3>
-              <p className="text-gray-600">
-                Learn to command the stage as a professional host or moderator. Ideal for
-                podcast/show hosts and panel moderators.
-              </p>
             </motion.div>
 
             {/* Public Speaking Program */}
