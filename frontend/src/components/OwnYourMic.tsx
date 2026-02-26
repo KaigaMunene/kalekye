@@ -37,11 +37,11 @@ const cardVariants: Variants = {
 
 const OwnYourMicPrograms = () => {
   return (
-    <div className="font-forum py-12 bg-white">
+    <div className="font-forum py-12">
       {/* Hero Section */}
       <motion.section
         id="own-your-mic"
-        className="text-dark text-center px-6 bg-white"
+        className="text-dark text-center px-6"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
@@ -78,7 +78,7 @@ const OwnYourMicPrograms = () => {
               <Image
                 src={hostProgram}
                 alt="Host Program - Own Your Mic"
-                className="rounded-md mb-4 w-full max-w-sm object-contain bg-red-500"
+                className="rounded-md mb-4 w-full max-w-sm object-contain"
                 width={400}
                 height={300}
               />
