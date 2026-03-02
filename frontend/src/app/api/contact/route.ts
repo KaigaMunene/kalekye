@@ -27,7 +27,9 @@ const contactSchema = z.object({
 
 export type ContactPayload = z.infer<typeof contactSchema>;
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY!);
+}
 
 function buildEmailHtml(payload: ContactPayload): string {
   return `
@@ -100,6 +102,7 @@ export async function POST(request: Request) {
   const payload = parsed.data;
   const html = buildEmailHtml(payload);
 
+  const resend = getResend();
   const { data, error } = await resend.emails.send({
     from: `${fromName} <${fromEmail}>`,
     to: [toEmail],
