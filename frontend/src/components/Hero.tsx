@@ -3,7 +3,7 @@ import heroImage from '../assets/images/hero.png';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full">
+    <section className="relative h-screen w-full overflow-hidden">
       {/* Background image */}
       <Image
         src={heroImage}
@@ -14,25 +14,26 @@ const Hero = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 flex items-center">
+        <div className="w-full max-w-3xl px-4 sm:px-8 md:px-16 lg:px-24 text-left">
+          {/* Headline */}
+          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            Unleash the Power of Your Voice
+            <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl pl-2 font-fraunces font-light">
+              with <i>Kalekye Mumo</i>
+            </span>
+          </h1>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-end h-full text-center px-6">
-        <h1 className="text-white text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
-          Welcome to Our Landing Page
-        </h1>
+          {/* Subtitle */}
+          <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-white">
+            Award-Winning Podcaster | Renowned Host | Voiceover Artist <br />
+            Creator of Own Your Mic Program
+          </h2>
 
-        <p className="text-white/90 text-lg md:text-xl mt-4 max-w-2xl">
-          Discover amazing features, seamless performance, and clean UI design.
-        </p>
-
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition">
-            Join Our Mic Program
-          </button>
-          <button className="px-8 py-3 bg-white/90 hover:bg-white text-gray-900 rounded-lg shadow-lg transition">
-            Hire me
-          </button>
+          {/* Tagline */}
+          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl italic font-light text-gray-200 max-w-xl">
+            Empowering Voices, Transforming Lives
+          </p>
         </div>
       </div>
     </section>
