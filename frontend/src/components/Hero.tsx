@@ -26,12 +26,12 @@ const Hero = () => {
 
           {/* Subtitle */}
           <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-white">
-            Award-Winning Podcaster | Renowned Host | Voiceover Artist <br />
-            Creator of Own Your Mic Program
+            Award-Winning Podcaster | Renowned Host | <br /> Voiceover Artist | Creator of Own Your
+            Mic Program
           </h2>
 
           {/* Tagline */}
-          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl italic font-light text-gray-200 max-w-xl">
+          <p className=" mt-4 text-sm sm:text-base md:text-lg lg:text-xl italic font-light text-gray-200 max-w-xl">
             Empowering Voices, Transforming Lives
           </p>
         </div>

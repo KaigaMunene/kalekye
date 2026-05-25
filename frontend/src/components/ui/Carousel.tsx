@@ -70,7 +70,8 @@ export default function Carousel({ images, autoSlideInterval = 5000 }: CarouselP
             <Image
               src={image.src}
               alt={image.alt}
-              fill
+              width={1024}
+              height={1024}
               priority={index === 0}
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 1024px"

@@ -41,10 +41,10 @@ const empowerImages = [
 
 export default function About() {
   return (
-    <>
+    <div className="font-forum text-brand-secondary">
       {/* Meet Kalekye Section */}
       <motion.section
-        className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-16 lg:py-24 xl:px-24"
+        className="bg-white px-4 py-8 sm:px-6 sm:py-20 lg:px-2 lg:py-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -52,24 +52,24 @@ export default function About() {
       >
         <div className="mx-auto max-w-6xl text-center">
           <motion.div
-            className="mb-12"
+            className="mb-4"
             variants={scaleIn}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="mb-6 text-3xl font-forum text-brand-secondary sm:text-4xl md:text-5xl">
-              Meet Kalekye Mumo
+            <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
+              Meet <span className="text-brand-gold"> Kalekye Mumo </span>
             </h2>
             <div className="mx-auto h-1 w-24 bg-brand-gold" />
           </motion.div>
 
           <motion.div
-            className="rounded-2xl bg-gray-50 p-8 shadow-lg sm:p-12 lg:p-16"
+            className="rounded-2xl bg-gray-50 p-4 shadow-lg sm:p-4 lg:p-8"
             variants={fadeUp}
           >
-            <p className="text-lg sm:text-xl leading-relaxed text-gray-700 max-w-4xl mx-auto">
-              With over <span className="font-bold text-brand-gold">15 years</span> in Kenyan
+            <p className="text-base sm:text-xl leading-relaxed max-w-4xl mx-auto">
+              With over <span className="font-bold text-brand-gold">15 years </span> in Kenyan
               mainstream media, I&apos;ve earned the title{' '}
               <span className="font-bold text-brand-gold">Queen of Media</span> for my ability to
               captivate audiences through dynamic communication. As a celebrated event host, panel
@@ -83,7 +83,7 @@ export default function About() {
 
       {/* KM Network Section */}
       <motion.section
-        className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-16 lg:py-24 xl:px-24"
+        className="bg-white px-4 py-12 sm:px-6 sm:py- lg:px- lg:py- xl:px-"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -92,11 +92,11 @@ export default function About() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <motion.div variants={fadeUp}>
-              <h3 className="mb-6 text-3xl font-forum font-bold text-gray-800 sm:text-4xl">
+              <h3 className="mb-2 sm:mb-2 text-xl font-bold sm:text-4xl">
                 Empowering Through <span className="text-brand-gold">KM Network</span>
               </h3>
               <div className="mb-6 h-1 w-20 bg-gold" />
-              <p className="mb-8 text-lg leading-relaxed text-gray-700">
+              <p className="mb-8 text-base sm:text-xl leading-relaxed text-brand-secondary">
                 Through my consultancy, KM Network, I designed the{' '}
                 <span className="font-semibold text-brand-gold">Own Your Mic</span> programs to
                 train future communicators.
@@ -119,7 +119,7 @@ export default function About() {
 
       {/* Conversations Section */}
       <motion.section
-        className="bg-gray-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-16 lg:py-24 xl:px-24"
+        className="bg-gray-50 px-4 py-12 sm:px-6 sm:py- lg:px- lg:py- xl:px-"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -135,19 +135,21 @@ export default function About() {
             </motion.div>
 
             <motion.div className="order-1 lg:order-2" variants={fadeUp}>
-              <h3 className="mb-2 text-3xl font-forum font-bold text-gray-800 sm:text-4xl">
+              <h3 className="mb-2 text-xl sm:text-4xl font-bold">
                 <span className="text-brand-gold">Conversations</span> with Kalekye
               </h3>
-              <div className="mb-2 h-1 w-20 bg-brand-gold" />
-              <p className="mb-8 text-lg leading-relaxed text-gray-700">
+              <div className="mb-4 h-1 w-20 bg-brand-gold" />
+              <p className="mb-8 text-base sm:text-xl leading-relaxed text-brand-secondary">
                 Africa&apos;s{' '}
                 <span className="font-bold text-brand-gold">Best Relationship Podcast 2024</span>,
                 amplifying stories that inspire.
               </p>
 
               <div className="rounded-lg bg-brand-gold/10 p-6">
-                <p className="mb-2 text-sm font-semibold text-brand-gold">🏆 AWARD WINNER</p>
-                <p className="text-gray-700">Africa&apos;s Best Relationship Podcast 2024</p>
+                <p className="mb-2 text-xs sm:text-sm font-semibold text-brand-gold">
+                  🏆 AWARD WINNER
+                </p>
+                <p>Africa&apos;s Best Relationship Podcast 2024</p>
               </div>
             </motion.div>
           </div>
@@ -156,7 +158,7 @@ export default function About() {
 
       {/* Voiceover Section */}
       <motion.section
-        className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-16 lg:py-24 xl:px-24"
+        className="bg-white px-4 py-12 sm:px- sm:py- lg:px- lg:py- xl:px-"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -165,17 +167,17 @@ export default function About() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <motion.div variants={fadeUp}>
-              <h3 className="mb-6 text-3xl font-forum font-bold text-gray-800 sm:text-4xl">
+              <h3 className="mb-2 text-xl sm:text-4xl font-bold">
                 <span className="text-brand-gold">Voiceover</span> Excellence
               </h3>
               <div className="mb-6 h-1 w-20 bg-brand-gold" />
-              <p className="mb-8 text-lg leading-relaxed text-gray-700">
+              <p className="mb-8 text-base sm:text-xl leading-relaxed">
                 Delivering powerful voiceovers for brands locally and internationally.
               </p>
 
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-lg bg-brand-gold px-6 py-3 font-semibold text-dark transition hover:bg-brand-gold/90"
+                className="inline-flex items-center gap-2 rounded-lg bg-brand-gold px-6 py-3 font-semibold transition hover:bg-brand-gold/90"
               >
                 Book Voiceover <MdOutlineKeyboardArrowRight />
               </Link>
@@ -187,6 +189,6 @@ export default function About() {
           </div>
         </div>
       </motion.section>
-    </>
+    </div>
   );
 }

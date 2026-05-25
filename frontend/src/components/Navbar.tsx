@@ -60,17 +60,18 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 shadow-md' : 'bg-black/60'
-      } backdrop-blur-md`}
+        isScrolled ? 'bg-white/80 shadow-md' : 'bg-transparent'
+      }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={isScrolled ? whitelogo : blacklogo}
+            src={isScrolled ? blacklogo : whitelogo}
             alt="KM Network Logo"
-            className="h-10 w-auto sm:h-12"
             width={48}
             height={56}
+            className="h-10 w-auto sm:h-12"
+            style={{ width: 'auto', height: 'auto' }}
             priority
           />
         </Link>
@@ -130,7 +131,7 @@ export default function Navbar() {
         <div
           id="mobile-nav"
           className={`md:hidden border-t ${
-            isScrolled ? 'bg-white' : 'bg-black/95'
+            isScrolled ? 'bg-white' : 'bg-transparent'
           } backdrop-blur-md`}
         >
           <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
