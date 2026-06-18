@@ -68,10 +68,10 @@ export default function Navbar() {
           <Image
             src={isScrolled ? blacklogo : whitelogo}
             alt="KM Network Logo"
-            width={48}
-            height={56}
+            width={600}
+            height={600}
             className="h-10 w-auto sm:h-12"
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: 'auto' }}
             priority
           />
         </Link>

@@ -51,7 +51,7 @@ const VideoGallery = () => {
                 className="w-full h-96 object-contain rounded-lg mb-4"
                 src={video.videoUrl}
               />
-              <h3 className="text-lg font-light text-gray-800">{video.title}</h3>
+              <h3 className="text-lg font-light text-brand-gold">{video.title}</h3>
             </div>
           ))}
         </div>
