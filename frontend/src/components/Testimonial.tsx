@@ -22,7 +22,7 @@ const cardVariants: Variants = {
 
 const TestimonialSlider = () => {
   return (
-    <section className="pt-4 pb-12 w-full h-auto font-fraunces overflow-hidden">
+    <section className="pt-4 pb-12 w-full h-auto bg-white font-fraunces overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 text-center relative">
         <motion.h2
           className="text-4xl font-bold mb-4 text-dark"

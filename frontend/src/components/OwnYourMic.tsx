@@ -37,32 +37,36 @@ const cardVariants: Variants = {
 
 const OwnYourMicPrograms = () => {
   return (
-    <div className="font-forum py-12">
+    <div className="font-forum py-12 bg-brand-primary">
       {/* Hero Section */}
       <motion.section
         id="own-your-mic"
-        className="text-dark text-center px-6"
+        className="text-dark text-center px-4 sm:px-6 lg:px-8"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
-          Master the Art of Communication with Own Your Mic
+        <h1 className="mx-auto mb-3 max-w-4xl text-2xl font-extrabold leading-tight text-balance sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl">
+          Master the Art of Communication with{' '}
+          <span className="text-brand-gold"> Own Your Mic </span>
         </h1>
-        <p className="text-lg md:text-xl pb-4 font-light max-w-3xl mx-auto">
+        <p className="mx-auto max-w-3xl px-2 pb-4 text-sm font-light leading-relaxed text-balance sm:px-0 sm:text-base md:text-lg lg:text-xl">
           Empowering Individuals to Host, Speak, and Deliver with Confidence
         </p>
       </motion.section>
 
       {/* Feature Section */}
       <motion.section
-        className="pb-12 px-6"
+        className=" px-6"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
         <div className="container mx-auto">
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">Programs Overview</h2>
+          <h2 className="mb-2 text-center text-xl font-bold leading-tight text-balance sm:text-2xl md:text-3xl lg:text-4xl">
+            Programs Overview
+          </h2>
+          <div className="mx-auto mb-6 h-1 w-24 bg-brand-gold sm:mb-8" />
           <motion.div
             className="grid gap-8 md:grid-cols-3"
             variants={cardVariants}
@@ -82,6 +86,10 @@ const OwnYourMicPrograms = () => {
                 width={400}
                 height={300}
               />
+              <h3 className="text-xl font-bold text-brand-gold mb-4">The Host Program</h3>
+              <p className="text-brand-secondary">
+                Learn how to host events, podcasts, and webinars with confidence and impact.
+              </p>
             </motion.div>
 
             {/* Public Speaking Program */}
@@ -97,8 +105,10 @@ const OwnYourMicPrograms = () => {
                 width={400}
                 height={300}
               />
-              <h3 className="text-xl font-bold text-dark mb-4">The Public Speaking Program</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-brand-gold mb-4">
+                The Public Speaking Program
+              </h3>
+              <p className="text-brand-secondary">
                 Build confidence, clarity, and impact in your speeches no matter your speaking
                 engagement. Overcome stage fear and connect with any audience.
               </p>
@@ -117,8 +127,8 @@ const OwnYourMicPrograms = () => {
                 width={400}
                 height={300}
               />
-              <h3 className="text-xl font-bold text-dark mb-4">The Voiceover Program</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-brand-gold mb-4">The Voiceover Program</h3>
+              <p className="text-brand-secondary">
                 Discover techniques to create compelling voiceover work. Tailored for commercials,
                 documentaries, and infomercials.
               </p>
@@ -129,20 +139,20 @@ const OwnYourMicPrograms = () => {
 
       {/* Call to Action Section */}
       <motion.section
-        className="text-black text-center py-6 px-6"
+        className="text-black text-center py- px-6"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
-        <div className="container mx-auto">
-          <h2 className="text-2xl md:text-4xl font-normal mb-6">
+        <div className="container mx-auto mt-8 mb-8">
+          <p className="text-2xl md:text-4xl font-normal mb-2">
             Ready to Transform Your Communication Skills?
-          </h2>
+          </p>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfrCvQgpZ4f4d5LEjgYm0eSZT-4-fhslhTlX3B0-RqWOf2CKA/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-gold text-white font-medium rounded-lg hover:bg-gold-dark transition duration-300"
+            className="inline-block px-8 py-4 bg-brand-gold text-white font-medium rounded-lg hover:bg-gold-dark transition duration-300"
             aria-label="Join Own Your Mic Programs"
           >
             Join Own Your Mic Programs <MdOutlineKeyboardArrowRight className="inline-block ml-2" />
@@ -152,13 +162,13 @@ const OwnYourMicPrograms = () => {
 
       {/* Promotional Video Section */}
       <motion.section
-        className="py-6 px-6"
+        className=" px-2"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
         <div className="container mx-auto">
-          <h2 className="text-2xl md:text-4xl font-bold text-dark text-center mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-dark text-center mb-4">
             See the Programs in Action
           </h2>
           <div className="w-full">

@@ -7,6 +7,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaYoutube } from 'react-icons/fa';
 import { FaSpotify } from 'react-icons/fa6';
+import { COMPANY_NAV_LINKS, SERVICES_NAV_LINKS, LEGAL_LINKS } from '@/components/utils/links';
 
 const Footer = () => {
   const socials = [
@@ -46,21 +47,13 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold underline mb-4">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/" className="hover:opacity-70 hover:underline transition">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:opacity-70 hover:underline transition">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:opacity-70 hover:underline transition">
-                  Contact
-                </Link>
-              </li>
+              {COMPANY_NAV_LINKS.map((link) => (
+                <li key={link.targetId}>
+                  <Link href={`#${link.targetId}`} className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -68,21 +61,13 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold underline mb-4">Explore</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/own-your-mic" className="hover:opacity-70 hover:underline transition">
-                  Own Your Mic
-                </Link>
-              </li>
-              <li>
-                <Link href="/podcast" className="hover:opacity-70 hover:underline transition">
-                  Podcast
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:opacity-70 hover:underline transition">
-                  Services
-                </Link>
-              </li>
+              {SERVICES_NAV_LINKS.map((link) => (
+                <li key={link.targetId}>
+                  <Link href={`#${link.targetId}`} className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -90,22 +75,17 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold underline mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/terms-and-conditions"
-                  className="hover:opacity-70 hover:underline transition"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="hover:opacity-70 hover:underline transition"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
+              {LEGAL_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    className="hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
