@@ -5,13 +5,22 @@
   /* Custom Colors */
   --color-brand-primary: #e5e0da;
   --color-brand-secondary: #1b1b1e;
+  --color-brand-bg: #f0ebe4;
   --color-brand-gold: #9e7758;
+  --color-brand-navy: #111822;
+  --color-brand-slate: #333740;
+  --color-brand-gray: #6c6a6a;
+  --color-brand-dark-brown: #4f362a;
+  --color-brand-light-brown: #745850;
+  --color-brand-peach: #f3b699;
 
   /* Custom Fonts */
   --font-family-forum: Forum, serif;
   --font-family-antic-didone: 'Antic Didone', serif;
   --font-family-cinzel: Cinzel, serif;
   --font-family-fraunces: Fraunces, serif;
+
+  --animate-audio-bar: audio-bar 0.9s ease-in-out infinite;
 }
 
 :root {
@@ -40,4 +49,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes audio-bar {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.audio-bar {
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .audio-bar {
+    animation: none !important;
+  }
 }

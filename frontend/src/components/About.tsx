@@ -41,10 +41,10 @@ const empowerImages = [
 
 export default function About() {
   return (
-    <div className="font-forum text-brand-secondary">
+    <div className="font-family-fraunces text-brand-navy">
       {/* Meet Kalekye Section */}
       <motion.section
-        className="bg-white px-4 py-8 sm:px-6 sm:py-20 lg:px-2 lg:py-8"
+        className="bg-brand-bg px-4 py-8 sm:px-6 sm:py-20 lg:px-2 lg:py-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -58,7 +58,7 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
+            <h2 className="mb-6 text-3xl text-brand-navy font-bold sm:text-4xl md:text-5xl">
               Meet <span className="text-brand-gold"> Kalekye Mumo </span>
             </h2>
             <div className="mx-auto h-1 w-24 bg-brand-gold" />
@@ -93,7 +93,8 @@ export default function About() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <motion.div variants={fadeUp}>
               <h3 className="mb-2 sm:mb-2 text-xl font-bold sm:text-4xl">
-                Empowering Through <span className="text-brand-gold">KM Network</span>
+                <span className="text-brand-navy"> Empowering Through</span>{' '}
+                <span className="text-brand-gold">KM Network</span>
               </h3>
               <div className="mb-6 h-1 w-20 bg-gold" />
               <p className="mb-8 text-base sm:text-xl leading-relaxed text-brand-secondary">

@@ -37,7 +37,7 @@ const cardVariants: Variants = {
 
 const OwnYourMicPrograms = () => {
   return (
-    <div className="font-forum py-12 bg-brand-primary">
+    <div className="font-family-fraunces py-12 bg-brand-bg">
       {/* Hero Section */}
       <motion.section
         id="own-your-mic"
@@ -46,11 +46,11 @@ const OwnYourMicPrograms = () => {
         initial="hidden"
         animate="visible"
       >
-        <h1 className="mx-auto mb-3 max-w-4xl text-2xl font-extrabold leading-tight text-balance sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl">
+        <h1 className="mx-auto mb-3 max-w-4xl text-2xl text-brand-navy font-extrabold leading-tight text-balance sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl">
           Master the Art of Communication with{' '}
           <span className="text-brand-gold"> Own Your Mic </span>
         </h1>
-        <p className="mx-auto max-w-3xl px-2 pb-4 text-sm font-light leading-relaxed text-balance sm:px-0 sm:text-base md:text-lg lg:text-xl">
+        <p className="mx-auto max-w-3xl px-2 pb-4 text-brand-navy text-sm font-light leading-relaxed text-balance sm:px-0 sm:text-base md:text-lg lg:text-xl">
           Empowering Individuals to Host, Speak, and Deliver with Confidence
         </p>
       </motion.section>
@@ -63,7 +63,7 @@ const OwnYourMicPrograms = () => {
         animate="visible"
       >
         <div className="container mx-auto">
-          <h2 className="mb-2 text-center text-xl font-bold leading-tight text-balance sm:text-2xl md:text-3xl lg:text-4xl">
+          <h2 className="mb-2 text-center text-xl text-brand-navy font-bold leading-tight text-balance sm:text-2xl md:text-3xl lg:text-4xl">
             Programs Overview
           </h2>
           <div className="mx-auto mb-6 h-1 w-24 bg-brand-gold sm:mb-8" />
@@ -75,7 +75,7 @@ const OwnYourMicPrograms = () => {
           >
             {/* Host Program */}
             <motion.div
-              className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+              className="bg-brand-navy shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
               whileHover={{ scale: 1.02, y: -5 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -86,15 +86,15 @@ const OwnYourMicPrograms = () => {
                 width={400}
                 height={300}
               />
-              <h3 className="text-xl font-bold text-brand-gold mb-4">The Host Program</h3>
-              <p className="text-brand-secondary">
+              <h3 className="text-xl font-bold text-brand-peach mb-4">The Host Program</h3>
+              <p className="">
                 Learn how to host events, podcasts, and webinars with confidence and impact.
               </p>
             </motion.div>
 
             {/* Public Speaking Program */}
             <motion.div
-              className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+              className="bg-brand-navy shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
               whileHover={{ scale: 1.02, y: -5 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -105,10 +105,10 @@ const OwnYourMicPrograms = () => {
                 width={400}
                 height={300}
               />
-              <h3 className="text-xl font-bold text-brand-gold mb-4">
+              <h3 className="text-xl font-bold text-brand-peach mb-4">
                 The Public Speaking Program
               </h3>
-              <p className="text-brand-secondary">
+              <p className="">
                 Build confidence, clarity, and impact in your speeches no matter your speaking
                 engagement. Overcome stage fear and connect with any audience.
               </p>
@@ -116,7 +116,7 @@ const OwnYourMicPrograms = () => {
 
             {/* Voiceover Program */}
             <motion.div
-              className="bg-white shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
+              className="bg-brand-navy shadow-lg rounded-lg overflow-hidden p-6 flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
               whileHover={{ scale: 1.02, y: -5 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -127,8 +127,8 @@ const OwnYourMicPrograms = () => {
                 width={400}
                 height={300}
               />
-              <h3 className="text-xl font-bold text-brand-gold mb-4">The Voiceover Program</h3>
-              <p className="text-brand-secondary">
+              <h3 className="text-xl font-bold text-brand-peach mb-4">The Voiceover Program</h3>
+              <p className="">
                 Discover techniques to create compelling voiceover work. Tailored for commercials,
                 documentaries, and infomercials.
               </p>
@@ -168,8 +168,8 @@ const OwnYourMicPrograms = () => {
         animate="visible"
       >
         <div className="container mx-auto">
-          <h2 className="text-2xl md:text-4xl font-bold text-dark text-center mb-4">
-            See the Programs in Action
+          <h2 className="text-xl md:text-2xl italic text-brand-navy text-center underline">
+            SEE OUR PROGRAMS IN ACTION
           </h2>
           <div className="w-full">
             <VideoSlider />
