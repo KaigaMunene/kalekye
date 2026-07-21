@@ -31,7 +31,7 @@ const VideoGallery = () => {
   return (
     <section className="font-forum" aria-labelledby="video-gallery-section">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-2xl font-normal mb-6" id="video-gallery-section">
+        <h2 className="text-2xl font-normal m-4 text-brand-navy" id="video-gallery-section">
           Featured Videos
         </h2>
 

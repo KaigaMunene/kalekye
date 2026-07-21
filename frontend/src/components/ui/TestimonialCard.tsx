@@ -17,24 +17,26 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <div className="px-4">
+    <div className="px-4 font-family-fraunces">
       <motion.div
-        className="bg-cream shadow-xl rounded-xl p-6 flex flex-col items-center text-center min-h-[350px] md:min-h-[400px] lg:min-h-[450px]"
+        className="bg-cream shadow-xl rounded-xl p-4 flex flex-col items-center text-center min-h-87.5 md:min-h-100 lg:min-h-112.5"
         whileHover={{ scale: 1.02, y: -5 }}
         transition={{ duration: 0.2 }}
       >
-        <h1 className="text-lg font-semibold mb-4 text-gold">{testimonial.program}</h1>
-        <Image
-          src={testimonial.image}
-          alt={testimonial.name}
-          width={400}
-          height={192}
-          className="w-full h-48 object-contain mb-4"
-        />
-        <p className="text-base italic text-gray-700 flex-1">{`"${testimonial.description}"`}</p>
-        <div className="mt-4">
-          <p className="font-bold text-gray-900">{testimonial.name}</p>
-          <p className="text-gray-500 text-sm">{testimonial.role}</p>
+        <h1 className="text-lg font-medium mb-4 text-brand-peach">{testimonial.program}</h1>
+        <div className="relative w-full h-48 mb-4">
+          <Image
+            src={testimonial.image}
+            alt={testimonial.name}
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 400px"
+          />
+        </div>
+        <p className="text-base italic text-white flex-1">{`"${testimonial.description}"`}</p>
+        <div className="mt-4 text-white">
+          <p className="font-bold">{testimonial.name}</p>
+          <p className=" text-sm">{testimonial.role}</p>
         </div>
       </motion.div>
     </div>

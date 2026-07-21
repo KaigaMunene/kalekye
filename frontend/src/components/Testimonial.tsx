@@ -5,49 +5,67 @@ import { testimonials } from '@/lib/data/testimonialData';
 import CustomSlider from './ui/Slider';
 import TestimonialCard, { type Testimonial } from './ui/TestimonialCard';
 
-// Animation variants for Testimonial component
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 },
+// Animation variants
+const containerVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      duration: 0.4,
-      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
-      staggerChildren: 0.1,
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94],
+      staggerChildren: 0.15,
     },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' },
   },
 };
 
 const TestimonialSlider = () => {
   return (
-    <section className="pt-4 pb-12 w-full h-auto bg-white font-fraunces overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 text-center relative">
-        <motion.h2
-          className="text-4xl font-bold mb-4 text-dark"
-          variants={cardVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          Testimonials
-        </motion.h2>
-        <motion.h4
-          className="mb-4 font-medium text-lg"
-          variants={cardVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          What people are saying about our programs
-        </motion.h4>
-        <motion.div variants={cardVariants} initial="hidden" animate="visible">
-          <CustomSlider>
-            {testimonials.map((member: Testimonial, index: number) => (
-              <TestimonialCard key={index} testimonial={member} />
-            ))}
-          </CustomSlider>
+    <section className="py-4 md:py-6 w-full bg-brand-bg overflow-hidden font-family-forum">
+      <motion.div
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
+        {/* Header Section */}
+        <motion.div variants={itemVariants} className="mb-10 sm:mb-14 max-w-2xl mx-auto">
+          <span className="inline-block px-3.5 py-1 mb-3 text-2xl font-semibold underline text-brand-gold">
+            TESTIMONIALS
+          </span>
+          <h2 className="text-sm sm:text-lg md:text-xl font-extrabold text-brand-navy tracking-tight mb-4">
+            What people are saying
+          </h2>
+          <p className="text-base sm:text-lg text-brand-slate font-normal leading-relaxed">
+            Discover how our programs empower voices and transform lives across the industry.
+          </p>
         </motion.div>
-      </div>
+
+        {/* Testimonial White Card Container */}
+        <motion.div
+          variants={itemVariants}
+          className="relative bg-brand-navy rounded-2xl sm:rounded-3xl border border-gray-100 shadow-xl shadow-brand-navy/5 px-6 sm:px-12 md:px-16 py-8 sm:py-12"
+        >
+          {/* CustomSlider wrapper with ample internal padding for arrow alignment */}
+          <div className="relative w-full">
+            <CustomSlider>
+              {testimonials.map((member: Testimonial, index: number) => (
+                <TestimonialCard key={index} testimonial={member} />
+              ))}
+            </CustomSlider>
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
